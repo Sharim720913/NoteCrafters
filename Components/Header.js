@@ -11,7 +11,7 @@ export default function Header() {
       <div className="logo">
         <h2>
           <span className="logo-red">Note</span>
-          <span className="logo-black">Crafters</span>
+          <span className="logo-black">Craft</span>
         </h2>
       </div>
 
