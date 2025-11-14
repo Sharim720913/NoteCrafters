@@ -1,0 +1,148 @@
+:root {
+  --primary-red: #d32f2f;
+  --text-gray: #555;
+}
+
+/* MAIN LAYOUT */
+.contact-main {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT INFO SECTION */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  color: var(--primary-red);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  font-weight: 500;
+}
+
+.icon {
+  color: var(--primary-red);
+  width: 20px;
+  height: 20px;
+}
+
+.categories h4 {
+  color: var(--primary-red);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  color: var(--text-gray);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* RIGHT FORM SECTION */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: var(--primary-red);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea,
+select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid var(--primary-red);
+}
+
+button {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c;
+  transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}

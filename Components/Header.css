@@ -1,0 +1,124 @@
+/* ===========================
+   HEADER STYLING
+   =========================== */
+
+.header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === Logo === */
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-red {
+  color: #c41e3a;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo-black {
+  color: #111;
+}
+
+/* === Nav Links === */
+.nav-links {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Alternating Colors */
+.nav-home {
+  color: #111;
+  text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.3);
+}
+
+.nav-features {
+  color: #c41e3a;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.nav-about {
+  color: #111;
+  text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.3);
+}
+
+.nav-contact {
+  color: #c41e3a;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* === 3D Text Effect === */
+.nav-links a {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  background: linear-gradient(180deg, #fff, #e3e3e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 4px rgba(0, 0, 0, 0.5),
+    -1px -1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-3px) scale(1.08);
+  text-shadow:
+    0 0 15px rgba(196, 30, 58, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* === Mobile Menu Icon === */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    transition: all 0.4s ease;
+    gap: 40px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    z-index: 200;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+}

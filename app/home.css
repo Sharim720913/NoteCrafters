@@ -1,0 +1,163 @@
+/* ===========================
+   NOTECRAFTERS HOME PAGE STYLE
+   =========================== */
+
+/* === Main Container === */
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* 👈 Text & box neeche show honge */
+  position: relative;
+  overflow: hidden;
+}
+
+/* === Background Image === */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1200px;
+  height: 1200px;
+  background: url("/hero-bg.png") no-repeat center/cover;
+  opacity: 0.4;         /* 👈 image visible & clean */
+  filter: blur(0.5px);  /* 👈 minimal blur */
+  transform: translateX(-50%) scale(1.05);
+  z-index: 0;
+}
+
+/* === Hero Section === */
+.hero-section {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding-bottom: 120px; /* 👈 Text aur input neeche */
+  position: relative;
+  z-index: 2;
+}
+
+/* === Left Content === */
+.hero-left {
+  flex: 1;
+  color: #1a1a1a;
+  z-index: 2;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-left span {
+  color: #e63946; /* Primary red */
+}
+
+.hero-left p {
+  margin: 0 auto 35px;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  font-family: var(--font-inter);
+}
+
+/* === Input Box === */
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-family: var(--font-inter);
+  color: #333;
+}
+
+.input-box button {
+  background-color: var(--primary-red);
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-box button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* === Hover subtle scale === */
+.input-box:hover {
+  transform: scale(1.02);
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-section {
+    padding-bottom: 80px;
+  }
+
+  .input-box {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .input-box input {
+    width: 100%;
+  }
+
+  .input-box button {
+    width: 100%;
+  }
+}
+
+/* === Subtle fade animation (optional) === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-left {
+  animation: fadeInUp 1s ease forwards;
+}
