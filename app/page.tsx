@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import "./Home.css";
+import "./home.css";
 import { motion } from "framer-motion";
 
 export default function Home() {
