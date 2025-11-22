@@ -25,6 +25,21 @@ export default function Features() {
       desc: "Stay distraction-free with a minimal writing interface that boosts clarity.",
       img: "/focus.png",
     },
+    {
+      title: "Workspace Sync",
+      desc: "Seamlessly sync your notes across devices for a fluid experience.",
+      img: "/workspace.png",
+    },
+    {
+      title: "Cloud Backup",
+      desc: "Never lose your data again — we auto-save everything securely in the cloud.",
+      img: "/cloud.png",
+    },
+    {
+      title: "Focus Mode",
+      desc: "Stay distraction-free with a minimal writing interface that boosts clarity.",
+      img: "/focus.png",
+    },
   ];
 
   return (

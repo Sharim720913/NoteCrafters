@@ -1,107 +1,129 @@
 "use client";
-import React, { useState } from "react";
+
+import Image from "next/image";
 import "./contact.css";
-import { Mail, Phone, MapPin } from "lucide-react"; // ✅ for icons
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    category: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for contacting NoteCrafters! 🎉");
-    setFormData({ name: "", email: "", category: "", message: "" });
-  };
-
+export default function Contact() {
   return (
-    <main className="contact-main">
-      <div className="contact-wrapper">
-        {/* LEFT SIDE - INFO SECTION */}
-        <div className="contact-info">
-          <h2>Get in Touch 📩</h2>
-          <p>
-            Whether you're a student, teacher, or institution — we’d love to hear from you.
-            Reach out to NoteCrafters and let's craft something amazing together!
-          </p>
+    <main className="contact-page">
+      <section className="contact-shell">
+        {/* HEADER */}
+        <header className="contact-header-row">
+          <div>
+            <h1 className="contact-heading">
+              CONTACT <span>US</span>
+            </h1>
+            <p className="contact-tagline">
+              Our friendly team would love to hear from you. Tell us how we can help.
+            </p>
+          </div>
+        </header>
 
-          <div className="info-box">
-            <div className="info-item">
-              <Phone className="icon" /> <span>+91 98765 43210</span>
-            </div>
-            <div className="info-item">
-              <Mail className="icon" /> <span>support@notecrafters.in</span>
-            </div>
-            <div className="info-item">
-              <MapPin className="icon" /> <span>Greater Noida, Uttar Pradesh, India</span>
+        {/* MAIN TWO-COLUMN GRID */}
+        <div className="contact-main-grid">
+          {/* LEFT: 3D IMAGE CARD */}
+          <div className="contact-image-column">
+            <div className="contact-image-card">
+              <Image
+                src="/ContactImage.png"
+                alt="NoteCraft Contact Illustration"
+                width={700}
+                height={500}
+                priority
+                className="contact-hero-img"
+              />
             </div>
           </div>
 
-          <div className="categories">
-            <h4>We work with:</h4>
-            <ul>
-              <li>🏫 Schools — for student note management</li>
-              <li>🎓 Colleges — for collaborative study resources</li>
-              <li>💼 Professionals — for productivity notes</li>
-            </ul>
+          {/* RIGHT: FORM CARD */}
+          <div className="contact-form-column">
+            <div className="contact-form-card">
+              <h2 className="form-title">Get in touch</h2>
+              <p className="form-subtitle">
+                Fill out the form and we’ll get back to you within 24 hours.
+              </p>
+
+              <form className="contact-form">
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="name">Full Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input
+                      id="phone"
+                      type="text"
+                      placeholder="+91 00000 00000"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    placeholder="Tell us briefly what you need help with…"
+                  />
+                </div>
+
+                <button type="submit" className="send-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE - FORM SECTION */}
-        <div className="contact-form">
-          <h3>Send Us a Message</h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+        {/* CONTACT INFO + HOURS */}
+        <section className="contact-info-section">
+          <div className="info-block">
+            <h3>Contact Information</h3>
+            <p>📧 support@notecraft.com</p>
+            <p>📞 +91 9876543210</p>
+            <p>📍 New Delhi, India</p>
+          </div>
 
-            <select
-              name="category"
-              value={formData.category}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Category</option>
-              <option value="school">School</option>
-              <option value="college">College</option>
-              <option value="other">Other</option>
-            </select>
+          <div className="info-block">
+            <h3>Business Hours</h3>
+            <p>
+              <strong>Mon–Fri:</strong> 9am – 8pm
+            </p>
+            <p>
+              <strong>Saturday:</strong> 9am – 6pm
+            </p>
+            <p>
+              <strong>Sunday:</strong> Closed
+            </p>
+          </div>
+        </section>
 
-            <textarea
-              name="message"
-              rows={4}
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
+        {/* FAKE MAP CARD (NO API KEY NEEDED) */}
+        <section className="contact-map-card">
+          <div className="map-header">
+            <span className="map-dot" />
+            <span className="map-title">NoteCraft Office Location (Preview)</span>
+          </div>
 
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-      </div>
+          <div className="map-body">
+            <div className="map-grid" />
+            <div className="map-marker">
+              <span>📍</span>
+              <p>New Delhi, India</p>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
   );
 }

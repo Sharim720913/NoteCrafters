@@ -1,0 +1,163 @@
+/* ================================
+   ABOUT PAGE – CLEAN FINAL CSS
+================================ */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
+
+/* Wrapper */
+.about-wrapper {
+  width: 100%;
+  padding: 140px 0;
+  background: #ffffff;
+}
+
+/* Section Container */
+.section-block {
+  max-width: 900px;
+  margin: 0 auto 120px auto;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpSection 0.8s ease forwards;
+}
+
+.section-block:nth-of-type(1) { animation-delay: 0.2s; }
+.section-block:nth-of-type(2) { animation-delay: 0.5s; }
+.section-block:nth-of-type(3) { animation-delay: 0.8s; }
+
+@keyframes fadeUpSection {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   BIG CURSIVE HEADERS
+================================ */
+
+.mix-title {
+  font-family: "Dancing Script", cursive !important;
+  font-size: 7rem !important;
+  line-height: 1 !important;
+  display: block !important;
+  color: #000 !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-bottom: 40px !important;
+}
+.mix-title .black {
+  color: black !important;
+  font-size: inherit !important;
+}
+
+.mix-title .red {
+  color: #e63946 !important;
+  font-size: inherit !important;
+}
+.mix-title .black {
+  color: black !important;
+  font-size: inherit !important;
+}
+
+.mix-title .red {
+  color: #e63946 !important;
+  font-size: inherit !important;
+}
+.mix-title,
+.mix-title .black,
+.mix-title .red {
+  font-family: "Dancing Script", cursive !important;
+}
+.para-text,
+.value-line {
+  font-family: "Dancing Script", cursive !important;
+}
+.mix-title {
+  font-family: "Dancing Script", cursive !important;
+  font-size: 7rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.mix-title .black {
+  color: #000 !important;
+}
+
+.mix-title .red {
+  color: #e63946 !important;
+}
+
+
+
+
+/* OUR (Black) */
+.mix-title .black {
+  color: #000;
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.3);
+}
+
+/* VISION/MISSION/VALUES (Red) */
+.mix-title .red {
+  color: #e63946;
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.25);
+}
+
+/* Responsive title size */
+@media (max-width: 1000px) {
+  .mix-title { font-size: 4.2rem !important; }
+}
+
+@media (max-width: 700px) {
+  .mix-title {
+    font-size: 3rem !important;
+    letter-spacing: 1px;
+  }
+}
+
+/* ================================
+   Cursive Paragraph
+================================ */
+
+.para-text {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: #000;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  font-weight: 500;
+}
+
+/* ================================
+   Values Lines
+================================ */
+
+.value-line {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  font-weight: 500;
+  color: #000;
+}
+
+.value-line b {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .para-text,
+  .value-line {
+    font-size: 1.5rem;
+    padding: 0 20px;
+  }
+}

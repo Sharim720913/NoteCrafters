@@ -1,5 +1,23 @@
 /* ==== Global Styles for NoteCrafters ==== */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+
+
+html, body {
+  image-rendering: -moz-crisp-edges;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 /* Font Variables */
 :root {
   --primary-red: #d32f2f;

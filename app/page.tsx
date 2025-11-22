@@ -46,6 +46,7 @@ export default function Home() {
         <div className="hero-right fade-in">
           <img src="/hero-bg.png" alt="Hero" className="hero-image" />
         </div>
+        
 
       </section>
 
@@ -70,21 +71,47 @@ export default function Home() {
 
           <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
             <img src="/workspace.png" alt="Workspace" />
-            <h3>Seamless Workspace</h3>
+            <h3>Our Callicraft</h3>
             <p>Keep your projects structured and collaborate effortlessly.</p>
           </motion.div>
 
           <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
             <img src="/cloud.png" alt="Cloud Sync" />
-            <h3>Cloud Sync</h3>
+            <h3>Creative Work</h3>
             <p>Access your notes from anywhere — safely stored in the cloud.</p>
           </motion.div>
 
           <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
             <img src="/focus.png" alt="Focus Mode" />
-            <h3>Focus Mode</h3>
+            <h3>Premium Touch </h3>
             <p>Eliminate distractions and focus on writing your best ideas.</p>
           </motion.div>
+
+
+          <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
+            <img src="/smartnotes.png" alt="Smart Notes" />
+            <h3>Neat Design</h3>
+            <p>Organize, format, and find notes instantly with intelligent tools.</p>
+          </motion.div>
+
+          <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
+            <img src="/workspace.png" alt="Workspace" />
+            <h3>Classic Work</h3>
+            <p>Keep your projects structured and collaborate effortlessly.</p>
+          </motion.div>
+
+          <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
+            <img src="/cloud.png" alt="Cloud Sync" />
+            <h3>Cover Page</h3>
+            <p>Access your notes from anywhere — safely stored in the cloud.</p>
+          </motion.div>
+
+          <motion.div className="feature-card" whileHover={{ scale: 1.05 }}>
+            <img src="/focus.png" alt="Focus Mode" />
+            <h3>Models Work </h3>
+            <p>Eliminate distractions and focus on writing your best ideas.</p>
+          </motion.div>
+
 
         </div>
       </motion.section>
